@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Sign Up | Playtime</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" href="styles/css/style.css">
+</head>
+
+<body>
+	<nav class="nav nav--dark">
+		<div class="nav__header">
+			<a href="index.html">
+				<img src="assets/img/logo--blue.png" alt="" class="nav__logo">
+			</a>
+			<button class="nav__open">&#9776;</button>
+		</div>
+		<ul class="nav__items">
+			<li>
+				<button class="nav__close">&#10006;</button>
+			</li>
+			<li class="nav__item">
+				<a href="location.html" class="nav__link">Find a Location</a>
+			</li>
+			<li class="nav__item">
+				<a href="login.html" class="nav__link">Login</a>
+			</li>
+			<li class="nav__item">
+				<a href="signup.html" class="nav__link">Sign Up</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="hand-container signup-rh">
+		<img src="assets/img/hand-left.png" alt="" class="hand hand--off signup-rh__img">
+	</div>
+
+	<div class="hand-container signup-lh">
+		<img src="assets/img/hand-right.png" alt="" class="hand signup-lh__img">
+	</div>
+
+
+	<div class="page__content">
+		<div class="form__container">
+			<h1 class="section__header">Sign Up</h1>
+
+			<div class="signup__cards">
+				<form class="form__card">
+
+					<h2 class="signup__header">Personal Details</h2>
+					<div class="form__group">
+						<input type="text" class="text" id="parent-name" placeholder=" " required>
+						<label for="parent-name" class="label">Name</label>
+					</div>
+
+					<div class="form__group">
+						<input type="text" class="text" id="parent-tele" placeholder=" " required>
+						<label for="parent-tele" class="label">Telephone</label>
+					</div>
+
+					<div class="signup__address">
+						<div class="form__group signup__house">
+							<input type="text" class="text " id="parent-house" placeholder=" ">
+							<label for="parent-house" class="label">House Number</label>
+						</div>
+
+						<div class="form__group signup__postcode">
+							<input type="text" class="text " id="parent-postcode" placeholder=" ">
+							<label for="parent-postcode" class="label">Postcode</label>
+						</div>
+					</div>
+
+					<button type="button" class="button button--secondary button--full">Find Address</button>
+
+					<div class="form__group">
+						<textarea name="" id="" cols="30" rows="10" class="textarea" id="parent-address" placeholder=" " required></textarea>
+						<label for="parent-address" class="label label--textarea">Address</label>
+					</div>
+
+					<div class="signup__buttons">
+						<button type="button" class="button button--secondary form__next">Next</button>
+					</div>
+
+				</form>
+
+
+				<form class="form__card form__card--hidden--right">
+
+					<h2 class="signup__header">Child's Information</h2>
+					<div class="form__group">
+						<input type="text" class="text" id="child-name" placeholder=" " required>
+						<label for="child-name" class="label">Name</label>
+					</div>
+
+					<div class="age">
+						<p class="age__label">Age</p>
+						<select name="years" id="" class="select" required>
+							<option value="" selected>Years</option>
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+						<select name="months" id="" class="select" required>
+							<option value="" selected>Months</option>
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+						</select>
+					</div>
+
+					<div class="form__group">
+						<textarea name="" id="" cols="30" rows="10" class="textarea" id="child-info" placeholder=" " required></textarea>
+						<label for="child-info" class="label label--textarea">Additional Information</label>
+					</div>
+
+					<div class="signup__buttons">
+						<button type="button" class="button button--secondary form__prev">Previous</button>
+						<button type="button" class="button button--secondary form__next">Next</button>
+					</div>
+
+				</form>
+
+				<form class="form__card form__card--hidden--right">
+
+					<h2 class="signup__header">Payment Information</h2>
+					<div class="form__group">
+						<input type="text" class="text" id="card-name" placeholder=" " required>
+						<label for="card-name" class="label">Name on Card</label>
+					</div>
+					<div class="form__group">
+						<input type="text" class="text" id="card-num" placeholder=" " required>
+						<label for="card-num" class="label">Card Number</label>
+					</div>
+
+					<div class="payment__row">
+						<div class="age">
+							<p class="age__label">Expiry Date</p>
+							<select name="month" id="" class="select" required>
+								<option value="" selected>Month</option>
+								<option value="0">00</option>
+								<option value="1">01</option>
+								<option value="2">02</option>
+								<option value="3">03</option>
+								<option value="4">04</option>
+								<option value="5">05</option>
+								<option value="6">06</option>
+								<option value="7">07</option>
+								<option value="8">08</option>
+								<option value="9">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+							</select>
+
+							<select name="year" id="" class="select" required>
+								<option value="" selected>Year</option>
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+								<option value="2021">2021</option>
+								<option value="2022">2022</option>
+								<option value="2023">2023</option>
+							</select>
+						</div>
+
+						<div class="form__group payment__csc">
+							<input type="text" class="text" id="card-csc" placeholder=" " required>
+							<label for="card-csc" class="label">CSC</label>
+						</div>
+
+					</div>
+
+					<div class="signup__buttons">
+						<button type="button" class="button button--secondary form__prev">Previous</button>
+						<button class="button button--primary form__next">Submit</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="footer">
+		<div class="container">
+			<img src="assets/img/footer.png" alt="" class="footer__img">
+			<div class="footer__content">
+				<img src="assets/img/logo--white.png" alt="" class="footer__logo">
+				<p class="footer__text">012345 67890</p>
+				<p class="footer__text">123 Easy Street, Town, ABC 123</p>
+				<p class="footer__text">office@playtime.com</p>
+			</div>
+
+		</div>
+
+	</footer>
+
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sign-up.js"></script>
+</body>
+
+</html>

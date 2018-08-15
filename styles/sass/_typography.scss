@@ -1,0 +1,37 @@
+$font-stack: "Nunito", sans-serif;
+
+
+html, body{
+	font-size:62.5%; //1rem = 10px
+}
+
+form{
+	font-size:10px;
+}
+
+p, li{
+	font-size:1.6rem;
+	line-height: 1.5;
+
+	color:$dark-gray;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color:$dark-gray;
+}
+
+h1{
+	font-size: $txt-xl;
+}
+
+h2{
+	font-size:$txt-lg;
+}
+
+h3{
+	font-size:$txt-med;
+}
+
+h4{
+	font-size:$txt-sm;
+}

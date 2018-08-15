@@ -1,0 +1,54 @@
+.review{
+	@extend %card;
+
+	margin:5em 0em;
+	padding: 3em;
+
+	display:flex;
+	flex-direction: column;
+
+	&__image{
+		background-size:cover;
+		background-position: center center;
+		border-radius:50%;
+		box-shadow:$box-shadow;
+
+		width:100%;
+		margin-right:5%;
+		padding-top:100%;
+		margin-bottom: 3em;
+
+		display:inline-block;
+		vertical-align: middle;
+	}
+
+	&__text{
+		color:$light-gray;
+	}
+
+	&__name{
+		margin-bottom: 0.2em;
+		font-size:$txt-sm;
+	}
+
+	&__content{
+		width:100%;
+		display:inline-block;
+		vertical-align: middle;
+	}
+
+	@include breakpoint($phone){
+		display:block;
+
+		&__image{
+			width:25%;
+			padding-top:25%;
+
+			margin-bottom: 0;
+		}
+
+		&__content{
+			width:64%;
+		}
+	}
+}

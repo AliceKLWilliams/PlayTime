@@ -1,0 +1,66 @@
+$img-width:175px;
+
+.footer{
+	background: $primary;
+	color:$white;
+	padding:3em 0em;
+	padding-top:5em;
+	margin-top:25em;
+
+	position: absolute;
+	bottom:0;
+	left:0;
+	right:0;
+
+	&__content{
+		position: relative;
+
+		display:grid;
+		width:100%;
+		align-items: center;
+		text-align: center;
+
+		grid-gap:4em;
+
+		margin-right: calc($img-width + 3em);
+	
+	}
+
+	&__text{
+		color:white;
+	}
+
+	&__logo{
+		max-height: 75px;
+		margin:0 auto;
+	}
+
+	&__img{
+		width:$img-width;
+		position: absolute;
+		left:50%;
+		transform:translateX(-50%) translateY(-100%);
+	}
+
+	@include breakpoint($laptop){
+		&__logo{
+			max-height: 50px;
+			margin-right:3em;
+		}
+
+		&__content{
+			grid-template-columns: repeat(4, max-content);
+
+			grid-gap:6em;
+		}
+
+		&__img{
+			bottom:0;
+			left:auto;
+			right:0;
+
+			transform:none;
+		}
+	}
+}
+

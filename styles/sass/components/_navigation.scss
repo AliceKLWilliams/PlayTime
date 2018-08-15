@@ -1,0 +1,203 @@
+.nav {
+	background-color: transparent;
+	font-size: 1rem;
+	width: 100%;
+	padding: 2em 1.5em 0rem 1.5em;
+
+	$this: &;
+
+	position: relative;
+	z-index: 3;
+
+	&__logo {
+		width: 9em;
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		
+		padding-bottom: 2em;
+	}
+
+	&__open {
+		font-size: 2.5rem;
+		color:$white;
+
+		cursor: pointer;
+	}
+
+	&__close{
+		font-size:2.5rem;
+		float:right;
+		margin-right:1em;
+
+		cursor: pointer;
+	}
+
+	&__items {
+		visibility: hidden;
+		opacity: 0;
+		width: calc(100% - 2.8em);
+
+		position: absolute;
+
+		left:50%;
+		transform: translateX(-50%);
+		padding:2em 0em;
+
+		top:2em;
+
+		border-radius: $border-radius;
+
+		background-color:$white;
+
+		text-align: center;
+
+		box-shadow: 1em 1.5em 2.5em rgba(0,0,0,0.2);
+
+		&--show {
+			
+
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&--transition-show{
+			transition: opacity .5s, visibility 0s linear .0s;
+		}
+
+		&--transition-hide{
+			transition: opacity .5s, visibility 0s linear .5s;
+		}
+	}
+
+	&__item {
+		list-style-type: none;
+	}
+
+	&__link {
+		width: 100%;
+		color: black;
+		display: inline-block;
+		padding: 1.5em 0em;
+		&:hover {
+			color: $secondary;
+		}
+	}
+
+	&--fixed{
+		position: absolute;
+		z-index:3;
+	}
+	
+	@include breakpoint($tablet) {
+		background-color: transparent;
+
+		display: flex;
+		justify-content: space-between;
+
+		width: 80%;
+
+		margin: 0 auto;
+		
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 3;
+
+		padding-left:0em;
+		padding-right:0em;
+
+		&__header{
+			padding:0px;
+		}
+
+		&__items{
+			visibility: visible;
+			opacity: 1;
+			width: auto;
+
+			transform:none;
+			left:auto;
+
+			padding:0px;
+
+			background-color:transparent;
+			position: relative;
+
+			box-shadow: none;
+
+			top:auto;
+		}
+
+		&__item {
+			display: inline-block;
+			margin-left: 5em;
+		}
+
+		&__open, &__close{
+			display:none;
+		}
+
+		&--fixed{
+			position: absolute;
+		}
+	}
+
+	&--light {
+		@include breakpoint($tablet) {
+			#{$this}__logo {
+				content: url("../../assets/img/logo--white.png");
+			}
+			
+			#{$this}__link {
+				color: $white;
+
+				&:hover{
+					color:$secondary;
+				}
+			}
+		}
+	}
+
+	&--dark{
+		#{$this}__open{
+			color:$dark-gray;
+		}
+
+		#{$this}__close{
+			color:white;
+		}
+		
+		#{$this}__items{
+			background-color:$primary;
+		}
+
+		#{$this}__link{
+			color:white;
+
+			&:hover{
+				color:$secondary;
+			}
+		}
+
+		@include breakpoint($tablet) {
+
+			#{$this}__items{
+				background-color:transparent;
+			}
+
+			#{$this}__link {
+				color: $dark-gray;
+
+				&:hover{
+					color:$secondary;
+				}
+			}
+		}
+	}
+}

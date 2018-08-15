@@ -1,0 +1,62 @@
+.signup{
+	&__header{
+		text-align: center;
+
+		overflow-wrap: break-word;
+	}
+
+	&__cards{
+		display:flex;
+		flex-direction: row;
+		align-items: flex-start;
+
+		position: relative;
+		overflow-x: hidden;
+
+		padding:15px;
+	}
+
+	&__address{
+		display: grid;
+		grid-gap: 5rem;
+	}
+
+	@include breakpoint($laptop){
+		&__address{
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			grid-gap: 2.5rem;
+		}
+	}
+}
+
+
+.age{
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr;
+	grid-gap:5em;
+
+	@include breakpoint($tablet){
+		grid-template-columns: max-content auto auto;
+		grid-gap: 2.5em;
+	}
+}
+
+.payment{
+	&__row{
+		display:grid;
+		grid-gap: 5rem;
+	}
+
+	&__csc{
+		flex-basis:30%;
+	}
+
+	@include breakpoint($tablet){
+		&__row{
+			grid-template-columns: 1fr 3fr;
+		}
+	}
+
+}

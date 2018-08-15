@@ -1,0 +1,60 @@
+.location{
+	display:flex;
+	flex-direction: column;
+
+	align-items: flex-start;
+
+	&__card{
+		@extend %card;
+
+		z-index:1;
+
+		@include breakpoint($laptop){
+			min-width: 40em;
+		}
+	}
+
+	&__img{
+		border-top-left-radius: $border-radius;
+		border-top-right-radius: $border-radius;
+
+		max-width: 100%;
+	}
+
+	&__content{
+		padding:3em;
+	}
+	
+	&__stats{
+		display:grid;
+		grid-template-columns: 1fr;
+		grid-gap:3em;
+
+		margin-bottom:5em;
+
+		@include breakpoint($phone){
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@include breakpoint($laptop){
+		flex-direction: row;
+
+		&__card{
+			margin-right:15em;
+		}
+	}
+}
+
+.stat{
+	text-align: center;
+
+	&__title{
+		font-weight:bold;
+		font-size:$txt-sm;
+	}
+
+	&__content{
+		color:$light-gray;
+	}
+}

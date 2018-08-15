@@ -1,0 +1,21 @@
+.promise{
+	&__image{
+		width:100%;
+		border-radius: $border-radius;
+		box-shadow:$box-shadow;
+
+		align-self:center;
+	}
+
+	&__list{
+		margin-top: 2.5em;
+		margin-left:3em;
+		list-style-type: none;
+	}
+
+	&__item{
+		margin: 2.5em 0em;
+		display:flex;
+		align-items: center;
+	}
+}

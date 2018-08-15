@@ -1,0 +1,145 @@
+.form{
+	&__container{
+		width:90%;
+		max-width:700px;
+		margin: 0 auto;
+	}
+
+	&__group{
+		position: relative;
+		display: inline-block;
+		width:100%;
+
+		.text:focus + .label, .text:not(:placeholder-shown) + .label, .textarea:focus + .label, .textarea:not(:placeholder-shown) + .label{
+			top:-5px;
+			transform: translateY(-100%);
+			left:0px;
+			color:$secondary;
+
+			font-size:1.4rem;
+		}
+
+		.label{
+			cursor: text;
+		}
+	}
+	
+	&__prev{
+		float:left;
+	}
+
+	&__next{
+		float: right;
+	}
+
+	&__card{
+		@extend %card;
+	
+		position: relative;
+		z-index:1;
+
+		padding:8em 3em;
+
+		width:100%;
+		
+		display:grid;
+		grid-template-columns: 100%;
+		grid-gap: 5rem;
+
+		&--hidden--right{
+			position: absolute;
+			transform:translateX(calc(100% + 100px));
+		}
+
+		&--hidden--left{
+			transform:translateX(calc(-100% - 100px));
+			position: absolute;
+		}
+	}
+
+	@include breakpoint($phone){
+		&__card{
+			padding-left:5em;
+			padding-right:5em;
+		}
+	}
+
+}
+
+.text{
+	border:none;
+	border-bottom:2px solid $light-gray;
+	padding:1em;
+
+	font-size:1.6em;
+
+	width:100%;
+
+	font-family: $font-stack;
+
+	&:focus, &:not(:placeholder-shown){
+		border-bottom-color: $secondary;
+		outline:none;
+	}
+}
+
+.textarea{
+	border:0.2em solid $light-gray;
+	width:100%;
+	padding:1em;
+	font-size:1.6em;
+
+	font-family: $font-stack;
+
+	resize: none;
+
+	max-width: 100%;
+
+	&:focus, &:not(:placeholder-shown){
+		border-color:$secondary;
+		outline:none;
+	}
+}
+
+.label{
+	position: absolute;
+	left:0.625em;
+	top:50%;
+	transform: translateY(-50%);
+
+	font-size: 1.6em;
+	color:$light-gray;
+
+	transition: all 0.3s;
+
+	&--textarea{
+		top:0.625em;
+		transform: none;
+	}
+}
+
+
+.select{
+	display:inline-block;
+	margin-right:2rem;
+	padding:1rem 4rem 1rem 0.5rem;
+
+	font-size:1.6rem;
+	font-family:$font-stack;
+
+	border:none;
+	border-bottom: 2px solid $light-gray;
+	color:$dark-gray;
+
+	background-image:url("../../assets/img/icons/down-arrow.png");
+	background-position: 95% center;
+	background-size:15px;
+	background-repeat: no-repeat;
+
+	appearance: none;
+	-webkit-appearance: none;
+
+	&:valid{
+		border-bottom-color: $secondary;
+	}
+}

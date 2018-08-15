@@ -1,0 +1,65 @@
+.gallery{
+	display:flex;
+	flex-direction: column;
+
+	&__images{
+		display: grid;
+		grid-template-columns: 1fr;
+
+		margin:0em 5em;
+		grid-gap:10em;
+	}
+
+	&__img{
+		border-radius:$border-radius;
+		box-shadow:$box-shadow;
+
+		max-width: 100%;
+	}
+
+	&__button{
+		display:none;
+
+		padding:0.5em;
+	}
+
+	&__arrow{
+		fill:$secondary;
+		transition: fill 0.3s;
+
+		font-size:1.2rem;
+
+		width:3em;
+		height: 3em;
+	}
+
+	@include breakpoint($tablet){
+		&__images{
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@include breakpoint($laptop){
+		flex-direction: row;
+		align-items: center;
+
+		&__button{
+			display:flex;
+		}
+
+		&__button:hover{
+			.gallery__arrow{
+				fill:white;
+			}
+		}
+
+		&__images{
+			grid-template-columns: repeat(3, 3fr);
+			align-items: center;
+		}
+
+		&__img{
+			width:100%;
+		}
+	}
+}

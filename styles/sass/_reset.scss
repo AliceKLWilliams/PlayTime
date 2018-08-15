@@ -1,0 +1,36 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+body, html{
+	width:100%;
+	background-color: $white;
+}
+
+body{
+	font-family: $font-stack;
+	position: relative;
+
+	padding-bottom:525px;
+
+	@include breakpoint($laptop){
+		padding-bottom: 325px;
+	}
+}
+
+a{
+	text-decoration: none;
+}
+
+button{
+	background:none;
+	border:none;
+
+	font-family:$font-stack;
+}
+
+ul{
+	list-style-type: none;
+}

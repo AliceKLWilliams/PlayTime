@@ -1,0 +1,38 @@
+.button{
+	background:$secondary;
+	color:$white;
+
+	text-align:center;
+	
+	padding:1em 1.5em;
+	border-radius:$border-radius;
+
+	font-size: 1.6rem;
+
+	cursor:pointer;
+
+	transition: color 0.5s, background-color 0.5s;
+
+	&--primary{
+		&:hover{
+			background-color: darken($secondary, 10%);
+		}
+	}
+
+	&--secondary{
+		background:none;
+		color:$secondary;
+
+		border: 0.125em solid $secondary;
+
+		&:hover{
+			background-color:$secondary;
+			color:white;
+		}
+	}
+
+	&--full{
+		width:100%;
+		display: inline-block;
+	}
+}

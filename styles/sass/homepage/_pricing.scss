@@ -1,0 +1,72 @@
+.pricing-cards{
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.pricing{
+	@extend %card;
+	
+	text-align: center;
+	
+	width:35em;
+	margin:1.5em;
+
+	padding:3em;
+
+	&__list{
+		list-style-type:none;
+		display:inline-block;
+		margin-top:2em;
+	}
+	
+	&__price{
+		font-size:5em;
+	}
+
+	&__perday{
+		color:$light-gray;
+		display:inline-block;
+		font-weight: bold;
+		font-size:$txt-sm;
+	}
+
+	&__item{
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		align-items: center;
+
+		margin-bottom:1em;
+		
+		&:last-of-type{
+			margin-bottom:2em;
+		}
+	}
+
+	&__tick{
+		margin-bottom: 0.5em;
+	}
+
+	&__spec{
+		font-size:$txt-sm;
+	}
+
+	&__select{
+		display:block;
+		margin:0 auto;
+	}
+
+	@include breakpoint($phone){
+		&__item{
+			flex-direction: row;
+		}
+
+		&__tick{
+			margin-right:1em;
+			margin-bottom: 0em;
+		}
+
+	}
+}
