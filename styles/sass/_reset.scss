@@ -13,6 +13,8 @@ body{
 	font-family: $font-stack;
 	position: relative;
 
+	min-height: 100vh;
+
 	padding-bottom:525px;
 
 	@include breakpoint($laptop){

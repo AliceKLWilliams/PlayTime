@@ -26,15 +26,24 @@
 	}
 
 	&__facts{
-		display:flex;
-		justify-content: space-around;
-		flex-wrap: wrap;
+		display:grid;
+		
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 2em;
+
 		padding:2em;
 		margin:3em 2em;
+	}
+
+	@include breakpoint($phone){
+		&__facts{
+			grid-template-columns: repeat(4, 1fr);
+		}
 	}
 }
 
 .fact{
+
 	&__number{
 		color:$dark-gray;
 		font-weight: bold;
@@ -47,7 +56,22 @@
 	}
 }
 
-.gm{
+.google-maps{
 	z-index:2;
 	max-width: 100%;
+}
+
+.location-container{
+	width:100%;
+	display:grid;
+
+	justify-items: center;
+	grid-template-columns: 1fr;
+	grid-gap: 10em;
+
+	align-items: center;
+
+	@include breakpoint($laptop){
+		grid-template-columns: 1fr 1fr;
+	}
 }

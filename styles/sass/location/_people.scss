@@ -30,7 +30,6 @@
 		border-top-right-radius: $border-radius;
 
 		width:100%;
-		height:60em;
 
 		object-fit: cover;
 	}
@@ -46,11 +45,5 @@
 
 	&__job{
 		color:$light-gray;
-	}
-
-	@include breakpoint($laptop){
-		&__img{
-			height:40em;
-		}
 	}
 }

@@ -14,7 +14,7 @@
 		box-shadow:$box-shadow;
 
 		width:100%;
-		margin-right:5%;
+		margin-right:10%;
 		padding-top:100%;
 		margin-bottom: 3em;
 
@@ -50,5 +50,20 @@
 		&__content{
 			width:64%;
 		}
+	}
+}
+
+.reviews{
+	width:100%;
+	display:grid;
+	grid-gap:10em;
+	justify-items: center;
+
+	align-items: center;
+	
+	grid-template-columns: 1fr;
+
+	@include breakpoint($laptop){
+		grid-template-columns: 1fr 1fr;
 	}
 }

@@ -16,7 +16,7 @@
 
 .search-lh{
 	display:none;
-	transform: translateY(-10%);
+	transform: translateY(70%);
 
 	&__img{
 		width:900px;
@@ -25,6 +25,15 @@
 
 	@include breakpoint($tablet){
 		display:block;
+	}
+
+	@include breakpoint($laptop){
+		transform:  translateY(15%);
+
+		&__img{
+			width:900px;
+			transform:translateX(-50%);
+		}
 	}
 }
 
