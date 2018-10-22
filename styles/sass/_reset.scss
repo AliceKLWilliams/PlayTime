@@ -30,3 +30,12 @@ button{
 ul{
 	list-style-type: none;
 }
+
+.feet{
+	background-image: url(../../assets/img/feet.png);
+
+	&--home{
+		background-image: url(../../assets/img/feet-home.png);
+		background-position: top left;
+	}
+}

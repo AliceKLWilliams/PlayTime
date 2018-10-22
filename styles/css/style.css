@@ -49,6 +49,12 @@ button {
 ul {
   list-style-type: none; }
 
+.feet {
+  background-image: url(../../assets/img/feet.png); }
+  .feet--home {
+    background-image: url(../../assets/img/feet-home.png);
+    background-position: top left; }
+
 .tick {
   margin-right: 1em; }
 
@@ -205,7 +211,8 @@ ul {
   text-align: center;
   font-size: 5.5rem; }
 .page__content {
-  margin-top: 7em; }
+  margin-top: 7em;
+  padding-bottom: 150px; }
 
 .section {
   font-size: 1rem;
@@ -225,8 +232,8 @@ ul {
 .footer {
   background-color: #3080E8;
   color: #707070;
-  margin-top: 150px;
-  padding: 40px 0px; }
+  padding: 40px 0px;
+  box-shadow: 3px 3px 10px #B4B4B4; }
   .footer__content {
     text-align: center;
     display: flex;
