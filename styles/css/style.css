@@ -229,11 +229,11 @@ ul {
     justify-content: space-between;
     flex-direction: column; }
   .footer__icons {
-    color: white;
     display: flex;
     flex-direction: row;
     margin-top: 20px; }
-    .footer__icons i {
+    .footer__icons a {
+      color: white;
       font-size: 20px;
       margin-right: 20px; }
   .footer__text {

@@ -17,14 +17,15 @@ $img-width:175px;
 	}
 
 	&__icons{
-		color:white;
-
+		
 		display: flex;
 		flex-direction: row;
 
 		margin-top:20px;
 
-		i{
+		a{
+			color:white;
+
 			font-size:20px;
 			margin-right: 20px;
 		}
