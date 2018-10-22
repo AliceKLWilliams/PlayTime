@@ -10,13 +10,19 @@ $img-width:175px;
 	&__content{
 		text-align: center;
 		display: flex;
-		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
+
+		flex-direction: column;
 	}
 
 	&__icons{
 		color:white;
+
+		display: flex;
+		flex-direction: row;
+
+		margin-top:20px;
 
 		i{
 			font-size:20px;
@@ -27,13 +33,27 @@ $img-width:175px;
 	&__text{
 		color:white;
 		margin-right: 40px;
-
-		display: inline;
 	}
 
 	&__logo{
 		max-height: 75px;
 		margin:0 auto;
+	}
+
+	@include breakpoint($tablet){
+		&__content{
+			flex-direction: row;
+		}
+
+		&__contact{
+			display:flex;
+			flex-direction: row;
+		}
+
+
+		&__icons{
+			margin-top: 0px;
+		}
 	}
 }
 

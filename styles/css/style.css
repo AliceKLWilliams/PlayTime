@@ -237,21 +237,31 @@ ul {
   .footer__content {
     text-align: center;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-direction: column; }
   .footer__icons {
-    color: white; }
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px; }
     .footer__icons i {
       font-size: 20px;
       margin-right: 20px; }
   .footer__text {
     color: white;
-    margin-right: 40px;
-    display: inline; }
+    margin-right: 40px; }
   .footer__logo {
     max-height: 75px;
     margin: 0 auto; }
+  @media only screen and (min-width: 768px) {
+    .footer__content {
+      flex-direction: row; }
+    .footer__contact {
+      display: flex;
+      flex-direction: row; }
+    .footer__icons {
+      margin-top: 0px; } }
 
 .form__container {
   width: 90%;
