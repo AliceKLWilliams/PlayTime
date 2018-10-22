@@ -14,12 +14,6 @@ body{
 	position: relative;
 
 	min-height: 100vh;
-
-	padding-bottom:525px;
-
-	@include breakpoint($laptop){
-		padding-bottom: 325px;
-	}
 }
 
 a{
