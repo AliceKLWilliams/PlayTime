@@ -96,7 +96,7 @@ ul {
   background-color: transparent;
   font-size: 1rem;
   width: 100%;
-  padding: 2em 1.5em 0rem 1.5em;
+  padding: 2em 5% 0rem 5%;
   position: relative;
   z-index: 3; }
   .nav__logo {
@@ -115,32 +115,27 @@ ul {
     font-size: 2.5rem;
     float: right;
     margin-right: 1em;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #F7F7F7; }
   .nav__items {
-    visibility: hidden;
-    opacity: 0;
-    width: calc(100% - 2.8em);
+    width: 100%;
+    padding: 0;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 2em 0em;
-    top: 2em;
-    border-radius: 14px;
-    background-color: #F7F7F7;
+    left: 0em;
+    top: 0em;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #3080E8;
     text-align: center;
-    box-shadow: 1em 1.5em 2.5em rgba(0, 0, 0, 0.2); }
+    transition: padding 0.5s, max-height 0.5s; }
     .nav__items--show {
-      opacity: 1;
-      visibility: visible; }
-    .nav__items--transition-show {
-      transition: opacity .5s, visibility 0s linear .0s; }
-    .nav__items--transition-hide {
-      transition: opacity .5s, visibility 0s linear .5s; }
+      max-height: 700px;
+      padding: 2em 0em; }
   .nav__item {
     list-style-type: none; }
   .nav__link {
     width: 100%;
-    color: black;
+    color: #F7F7F7;
     display: inline-block;
     padding: 1.5em 0em; }
     .nav__link:hover {
@@ -153,7 +148,7 @@ ul {
       background-color: transparent;
       display: flex;
       justify-content: space-between;
-      width: 80%;
+      width: 85%;
       margin: 0 auto;
       position: relative;
       top: 0;
@@ -174,7 +169,8 @@ ul {
         background-color: transparent;
         position: relative;
         box-shadow: none;
-        top: auto; }
+        top: auto;
+        max-height: none; }
       .nav__item {
         display: inline-block;
         margin-left: 5em; }
@@ -191,14 +187,6 @@ ul {
         color: #FFAB22; } }
   .nav--dark .nav__open {
     color: #707070; }
-  .nav--dark .nav__close {
-    color: white; }
-  .nav--dark .nav__items {
-    background-color: #3080E8; }
-  .nav--dark .nav__link {
-    color: white; }
-    .nav--dark .nav__link:hover {
-      color: #FFAB22; }
   @media only screen and (min-width: 768px) {
     .nav--dark .nav__items {
       background-color: transparent; }
